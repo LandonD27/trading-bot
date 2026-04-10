@@ -7,10 +7,11 @@ import requests, re, json, base64
 from bs4 import BeautifulSoup
 from datetime import datetime
 
-ALPACA_KEY = '<YOUR_ALPACA_KEY>'
-ALPACA_SECRET = '<YOUR_ALPACA_SECRET>'
+import os
+ALPACA_KEY = os.environ['ALPACA_KEY']
+ALPACA_SECRET = os.environ['ALPACA_SECRET']
 ALPACA_BASE = 'https://paper-api.alpaca.markets/v2'
-GH_TOKEN = '<YOUR_GH_TOKEN>'
+GH_TOKEN = os.environ['GH_TOKEN']
 GH_REPO = 'LandonD27/trading-bot'
 MIRROR_NOTIONAL = 500
 TOP_N = 5
